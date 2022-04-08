@@ -47,3 +47,25 @@ void StackType::Pop() {
 		delete temp;
 	}
 }
+//Post::parameter x(the first item) is now the last item
+void StackType::insertAtBottom(int x) {
+	if (isEmpty())
+		Push(x);
+	else {
+		int a = Top();
+		Pop();
+		insertAtBottom(x);
+		Push(a);
+	}
+}
+
+//Pre:: there must be items in the stack
+void StackType::reverse() {
+	if (!isEmpty()) {
+		int x = Top();
+		Pop();
+		reverse();
+		insertAtBottom(x);
+	}
+
+}
