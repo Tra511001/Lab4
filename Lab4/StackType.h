@@ -17,6 +17,9 @@ public:
 	bool isEmpty();
 	void Push(int newItem);
 	void Pop();
+	void insertAtBottom(int x);
+	void reverse();
+	int size;
 private:
 	Node* nextUpPtr;
 }
