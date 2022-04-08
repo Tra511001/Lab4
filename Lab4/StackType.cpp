@@ -60,6 +60,8 @@ void StackType::insertAtBottom(int x) {
 }
 
 //Pre:: there must be items in the stack
+//Post:: runs until stack is empty, temporary variable x holds the top value and insertAtBottom() 
+//inserts it at the bottom
 void StackType::reverse() {
 	if (!isEmpty()) {
 		int x = Top();
